@@ -1,8 +1,70 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+const addAll =function(nums){
+  let sum = 0;
+  for (num of nums){
+    sum += num;
+  }
+  return sum;
+}
 
+const countSpaces = function(str){
+  let num = 0;
+  for(char of str){
+    if(char ===' '){num++}
+  }
+  return num;
+}
 
+const countTrues = function(bools){
+  let num =0;
+  for (bool of bools){
+    if(bool === true){num++;}
+  }
+  return num;
+}
+
+const makeFriendly = function(para){
+  let newPara = '';
+  for (char of para){
+    if(char==='.'){newPara += '!';}
+    else{newPara += char}
+  }
+  return newPara;
+}
+
+const cubeAll = function(nums){
+  const cube = [];
+  for(num of nums){
+    cube.push(num ** 3);
+  }
+  return cube;
+}
+const dogs = [
+  'Fido',
+  'Rolph',
+  'Maisie',
+];
+
+const cats = [
+  'Garfield',
+  'Heathcliff',
+]
+
+const dinos = [
+  'Barnie',
+  'Sharp Tooth',
+]
+const addNoises = function(animals){
+  const noise =[];
+  for(animal of animals){
+    if(dogs.includes(animal)){noise.push(`${animal} says "Woof!"`);}
+    if(cats.includes(animal)){noise.push(`${animal} says "Meow!"`)}
+    if(dinos.includes(animal)){noise.push(`${animal} says "ROWR."`)}
+  }
+  return noise;
+}
 
 
 
