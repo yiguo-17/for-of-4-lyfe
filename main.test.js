@@ -7,7 +7,6 @@
 
 
 
-
 /*********************************
  * OUR CODE BELOW; DO NOT TOUCH! *
  *********************************/
@@ -46,19 +45,6 @@ describe('addAll', () => {
 
     expect(addAll(nums1)).toBe(1007);
     expect(addAll(nums2)).toBe(-854);
-  })
-
-  it(`doesn't modify the original array`, () => {
-    const nums1 = [5, 3];
-    const nums2 = [11, 8];
-    const original1 = [5, 3];
-    const original2 = [11, 8];
-
-    addAll(nums1);
-    addAll(nums2);
-
-    expect(nums1).toEqual(original1);
-    expect(nums2).toEqual(original2);
   })
 
   it(`isn't reassignable`, () => {
@@ -148,6 +134,10 @@ describe('makeFriendly', () => {
     expect(makeFriendly(paragraph2)).toEqual(friendly2);
     expect(makeFriendly(paragraph3)).toEqual(friendly3);
   })
+
+  it(`isn't reassignable`, () => {
+    expect(() => makeFriendly = 500).toThrow();
+  })
 })
 
 describe('cubeAll', () => {
@@ -159,6 +149,23 @@ describe('cubeAll', () => {
 
     expect(cubeAll(nums1)).toEqual(cubes1);
     expect(cubeAll(nums2)).toEqual(cubes2);
+  })
+
+  it(`doesn't modify the original array`, () => {
+    const nums1 = [3, 2, 5];
+    const nums2 = [1, 10, -2];
+    const originalNums1 = [3, 2, 5];
+    const originalNums2 = [1, 10, -2];
+
+    cubeAll(nums1);
+    cubeAll(nums2);
+
+    expect(nums1).toEqual(originalNums1);
+    expect(nums2).toEqual(originalNums2);
+  })
+
+  it(`isn't reassignable`, () => {
+    expect(() => cubeAll = 500).toThrow();
   })
 })
 
@@ -187,5 +194,22 @@ describe('addNoises', () => {
 
     expect(addNoises(animals1)).toEqual(withNoises1);
     expect(addNoises(animals2)).toEqual(withNoises2);
+  })
+
+  it(`doesn't modify the original array`, () => {
+    const animals1 = ['Fido', 'Garfield', 'Sharp Tooth'];
+    const animals2 = ['Rolph', 'Maisie', 'Barnie', 'Heathcliff'];
+    const originalAnimals1 = ['Fido', 'Garfield', 'Sharp Tooth'];
+    const originalAnimals2 = ['Rolph', 'Maisie', 'Barnie', 'Heathcliff'];
+
+    addNoises(animals1);
+    addNoises(animals2);
+
+    expect(animals1).toEqual(originalAnimals1);
+    expect(animals2).toEqual(originalAnimals2);
+  })
+
+  it(`isn't reassignable`, () => {
+    expect(() => addNoises = 500).toThrow();
   })
 })
