@@ -17,7 +17,7 @@ That one got away from me. Sorry.
 
 1. Fork and clone.
 2. Navigate into the directory.
-3. `npm install` and `npm test`.
+3. Run `jest --watch-all`.
 4. Code away in `main.test.js`, NOT `main.js`. (There isn't one for annoying technical test-related reasons.)
 5. Read the tests further down in `main.test.js` for function usage examples!
 
@@ -41,4 +41,4 @@ That one got away from me. Sorry.
 ##### Maps
 
 * `cubeAll` - given an array of numbers, returns an array where each number has been cubed (a.k.a. raised to the third power).
-* `addNoises` - given an array of strings, returns an array where each string has appended to it that animal's noise. See tests for examples!
+* `addNoises` - given an array of strings, returns an array where each string has appended to it that animal's noise. See tests for examples! **HINT:** You're definitely going to have to check for each tested-for animal name, but you could use a compound boolean in your `if` check, or set up an array of potential animals and use `.includes`, or use a `switch` statement.
