@@ -3,7 +3,7 @@
  ******************/
 const addAll =function(nums){
   let sum = 0;
-  for (num of nums){
+  for (const num of nums){
     sum += num;
   }
   return sum;
@@ -11,7 +11,7 @@ const addAll =function(nums){
 
 const countSpaces = function(str){
   let num = 0;
-  for(char of str){
+  for(const char of str){
     if(char ===' '){num++}
   }
   return num;
@@ -19,7 +19,7 @@ const countSpaces = function(str){
 
 const countTrues = function(bools){
   let num =0;
-  for (bool of bools){
+  for (const bool of bools){
     if(bool === true){num++;}
   }
   return num;
@@ -27,7 +27,7 @@ const countTrues = function(bools){
 
 const makeFriendly = function(para){
   let newPara = '';
-  for (char of para){
+  for (const char of para){
     if(char==='.'){newPara += '!';}
     else{newPara += char}
   }
@@ -36,7 +36,7 @@ const makeFriendly = function(para){
 
 const cubeAll = function(nums){
   const cube = [];
-  for(num of nums){
+  for(const num of nums){
     cube.push(num ** 3);
   }
   return cube;
@@ -58,7 +58,7 @@ const dinos = [
 ]
 const addNoises = function(animals){
   const noise =[];
-  for(animal of animals){
+  for(const animal of animals){
     if(dogs.includes(animal)){noise.push(`${animal} says "Woof!"`);}
     if(cats.includes(animal)){noise.push(`${animal} says "Meow!"`)}
     if(dinos.includes(animal)){noise.push(`${animal} says "ROWR."`)}
